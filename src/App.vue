@@ -1,7 +1,7 @@
 <script setup>
   import { reactive } from 'vue';
   import Cabecalho from './components/Cabecalho.vue';
-  import Formulario from './components/formulario.vue';
+  import formulario from './components/formulario.vue';
   import ListaDeTarefas from './components/ListaDeTarefas.vue'; 
 
   const estado = reactive({
@@ -57,7 +57,7 @@
 <template>
   <div class="container">
     <Cabecalho :tarefas-pendentes="getTarefasPendentes().length" />
-    <Formulario :trocar-filtro="evento => estado.filtro = evento.target.value" :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="event => estado.tarefaTemp = EnvironmentModuleGraph.targer.value" :cadastra-tarefa="cadastraTarefa"/>
+    <formulario :trocar-filtro="evento => estado.filtro = evento.target.value" :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="event => estado.tarefaTemp = EnvironmentModuleGraph.targer.value" :cadastra-tarefa="cadastraTarefa"/>
     <ListaDeTarefas :tarefas="getTarefasFiltradas()"/>
   </div>
 </template>
