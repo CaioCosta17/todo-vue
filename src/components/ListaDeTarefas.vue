@@ -13,7 +13,7 @@
         </li>
     </ul>
     <p v-else class="mt-4 fs-4 text-center">
-        Não há tarefas pendentes.
+        Não há tarefas pendentes
     </p>
 </template>
 
